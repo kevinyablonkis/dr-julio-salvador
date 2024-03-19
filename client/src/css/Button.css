@@ -1,0 +1,22 @@
+.button_primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    background-color: #012677;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    transition: ease .3s;
+}
+
+.button_primary:hover {
+    background-color: #0c3897;
+}
+
+.button_primary:active {
+    transition: none;
+    background-color: #005bc5;
+}

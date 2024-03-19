@@ -1,0 +1,30 @@
+.navegation_in_page {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(-20px,-50%);
+}
+
+.navegation_in_page_nav_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navegation_in_page_nav_list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(118, 119, 118);
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(82, 82, 82, 0.776);
+}
+
+.navegation_in_page_nav_list li .link_to_footer {
+    width: 19px;
+    height: 19px;
+}

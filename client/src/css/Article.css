@@ -1,0 +1,202 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 150px;
+    padding-bottom: 50px;
+    background-color: #1c47a4;
+}
+
+.article h1 {
+    color: white;
+    font-size: 3em;
+}
+
+.article h2 {
+    color: white;
+    font-size: 3em;
+}
+
+.article__last_article {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    background-color: white;
+    width: 850px;
+}
+
+.article__last_article__img {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    border-radius: 15px;
+    width: 280px;
+    height: 350px;
+    background-color: grey;
+}
+
+.article__last_article__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0 20px;
+    width: 60%;
+}
+
+.article__last_article__info_text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.article__last_article__info_text h3 {
+    max-width: 700px;
+    font-size: 2em;
+    text-wrap: balance;
+}
+
+.article__last_article__info_text span {
+    border: 2px #14306a solid;
+    border-radius: 15px;
+    background-color: #1c47a4;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 5px 8px;
+}
+
+.article__last_article__details_article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.article__last_article__details_article span {
+    display: flex;
+    flex-direction: row;
+    align-items : center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.article__last_article__details_article span svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-3px);
+}
+
+.article__last_articles {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.article__last_articles h2 {
+    margin-left: 150px;
+    padding-bottom: 20px;
+}
+
+.article__last_articles__cards h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.article__last_articles__cards__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.article__last_articles__cards__card span {
+    font-size: 20px;
+    color: white;
+}
+
+.article__last_articles__cards__card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 440px;
+    padding: 20px 15px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.article__last_articles__cards__card__info__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.article__last_articles__cards__card__info__text .article__last_article__img {
+    width: 200px;
+    height: 250px;
+}
+
+.article__last_articles__cards__card__info__text h3 {
+    font-size: 20px;
+    color: black;
+}
+
+.article__last_articles__cards__card__info__ {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.article__last_article__info_text__btn_details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.article__last_articles__cards__card__info__details_article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.article__last_articles__cards__card__info__details_article span {
+    color: black;
+}
+
+.article__last_articles__cards__card__info__details_article span {
+    display: flex;
+    flex-direction: row;
+    align-items : center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.article__last_articles__cards__card__info__details_article span svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-3px);
+}
+

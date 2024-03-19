@@ -1,0 +1,29 @@
+.port {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    gap: 200px;
+    background-color: #005bc5;
+}
+
+.port_text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.port_text h1 {
+    font-size: 40px;
+}
+
+.port_text p {
+    font-size: 20px;
+}
+
+.port_img {
+    border: 2px black solid;
+}

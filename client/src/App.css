@@ -1,0 +1,13 @@
+.container_menu_main {
+    display: flex;
+    flex-direction: row;
+}
+
+.main {
+    width: 100%;
+}
+
+.content_of_page {
+    width: 100%;
+    margin-left: 80px;
+}

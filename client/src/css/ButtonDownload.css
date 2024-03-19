@@ -1,0 +1,23 @@
+.button_download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #01770b;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: ease .3s;
+}
+
+.button_download:hover {
+    background-color: #0f6216;
+}
+
+.button_download:active {
+    transition: none;
+    background-color: #0d8617;
+}

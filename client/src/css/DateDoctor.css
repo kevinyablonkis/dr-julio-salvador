@@ -1,0 +1,29 @@
+.date_doctor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100vh;
+    background-color: #1c47a4;
+}
+
+.date_doctor_div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.date_doctor_div h2 {
+    font-size: 50px;
+    color: white;
+}
+
+.date_doctor_div_text {
+    width: 600px;
+}
+
+.date_doctor_div_text p {
+    font-size: 16px;
+    color: white;
+}
