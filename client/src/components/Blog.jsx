@@ -35,18 +35,18 @@ function Blog() {
         </p>
         <Button valor="Leer" ancho={"150px"} />
         <div className="blog__last_blog__details_blog">
-          <span>
+          <div>
             <FaRegHeart size={"18px"} />
-            1.5K
-          </span>
-          <span>
+            <span>1.5K</span>
+          </div>
+          <div>
             <MdOutlineRemoveRedEye size={"20px"} />
-            5K
-          </span>
-          <span>
+            <span>5K</span>
+          </div>
+          <div>
             <FaRegComment size={"18px"} />
-            800
-          </span>
+            <span>800</span>
+          </div>
         </div>
       </div>
       <section className="blog__last_blogs">
@@ -68,20 +68,20 @@ function Blog() {
                   enim? Praesentium at veniam aspernatur officiis?
                 </p>
               </div>
-              <div className="blog__last_blogs__cards__card__info__">
+              <div className="blog__last_blogs__cards__card__info__container__details_blog">
                 <div className="blog__last_blogs__cards__card__info__details_blog">
-                  <span>
+                  <div>
                     <FaRegHeart size={"16px"} />
-                    1.5K
-                  </span>
-                  <span>
+                    <span>1.5K</span>
+                  </div>
+                  <div>
                     <MdOutlineRemoveRedEye size={"20px"} />
-                    5K
-                  </span>
-                  <span>
+                    <span>5K</span>
+                  </div>
+                  <div>
                     <FaRegComment size={"16px"} />
-                    800
-                  </span>
+                    <span>800</span>
+                  </div>
                 </div>
                 <Button valor={<FaArrowRightLong />} ancho={"50px"} />
               </div>

@@ -7,7 +7,7 @@ function Port() {
         <h1>¡Bienvenido!</h1>
         <p>
           Será un placer estar al tanto de tu salud, y un honor que me hallas
-          escogido para atender.
+          escogido para atenderte.
         </p>
       </div>
       <div className="port_img">

@@ -35,14 +35,14 @@ function Article() {
           </div>
           <div className="article__last_article__info_text__btn_details">
             <div className="article__last_article__details_article">
-              <span>
+              <div>
                 <FaRegHeart size={"18px"} />
-                1.5K
-              </span>
-              <span>
+                <span>1.5K</span>
+              </div>
+              <div>
                 <MdOutlineFileDownload size={"20px"} />
-                5K
-              </span>
+                <span>5K</span>
+              </div>
             </div>
             <Button valor="Leer" ancho={"150px"} />
           </div>
@@ -66,16 +66,16 @@ function Article() {
                   Ipsam, consequatur. Doloremque.
                 </h3>
               </div>
-              <div className="article__last_articles__cards__card__info__">
+              <div className="article__last_articles__cards__card__info__container__details_article">
                 <div className="article__last_articles__cards__card__info__details_article">
-                  <span>
+                  <div>
                     <FaRegHeart size={"16px"} />
-                    700
-                  </span>
-                  <span>
+                    <span>700</span>
+                  </div>
+                  <div>
                     <MdOutlineFileDownload size={"20px"} />
-                    1K
-                  </span>
+                    <span>1K</span>
+                  </div>
                 </div>
                 <Button valor={<FaArrowRightLong />} ancho={"50px"} />
               </div>

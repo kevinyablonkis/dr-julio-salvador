@@ -4,6 +4,7 @@ import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Port from "./components/Port";
 import DateDoctor from "./components/DateDoctor";
+import InfoServices from "./components/InfoServices";
 import Services from "./components/Services";
 import Patients from "./components/Patients";
 import NavegationInPage from "./components/NavegationInPage";
@@ -17,7 +18,7 @@ const Home = () => {
     <>
       <Port />
       <DateDoctor />
-      <Services />
+      <InfoServices />
       <Patients />
       <NavegationInPage />
     </>
@@ -32,6 +33,10 @@ const PageArticle = () => {
   return <Article />;
 };
 
+const PageServices = () => {
+  return <Services />;
+};
+
 function App() {
   return (
     <>
@@ -43,6 +48,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="blog" element={<PageBlog />} />
               <Route path="articulos" element={<PageArticle />} />
+              <Route path="servicios" element={<PageServices />} />
             </Routes>
           </main>
         </div>
