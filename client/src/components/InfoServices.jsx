@@ -4,11 +4,11 @@ import Button from "./Button";
 
 function Services() {
   return (
-    <section className="services" id="services">
+    <section className="info_services" id="services">
       <h2>Servicios Disponibles</h2>
-      <div className="services_container">
-        <div className="services_cards">
-          <div className="services_cards_text">
+      <div className="info_services_container">
+        <div className="info_services_cards">
+          <div className="info_services_cards_text">
             <h3>Plan Personalizado</h3>
             <p>
               Recibe un enfoque integral para tu bienestar neurológico con un
@@ -21,8 +21,8 @@ function Services() {
             <Button valor="Explorar Precios" ancho={"200px"} />
           </NavLink>
         </div>
-        <div className="services_cards">
-          <div className="services_cards_text">
+        <div className="info_services_cards">
+          <div className="info_services_cards_text">
             <h3>Asesoría Personal</h3>
             <p>
               Obtén orientación especializada sobre problemas neurológicos a
@@ -35,8 +35,8 @@ function Services() {
             <Button valor="Explorar Precios" ancho={"200px"} />
           </NavLink>
         </div>
-        <div className="services_cards">
-          <div className="services_cards_text">
+        <div className="info_services_cards">
+          <div className="info_services_cards_text">
             <h3>Consulta Privada</h3>
             <p>
               Accede a un servicio exclusivo con un neurólogo experto, donde

@@ -1,0 +1,78 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #1c47a4;
+    color: white;
+    padding-bottom: 50px;
+}
+
+.services h1 {
+    font-size: 3em;
+}
+
+.services__container {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.services__container__service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: ease .5s;
+}
+
+.services__container__service:hover {
+    /* transform: scale(108%); */
+    box-shadow: 13px 13px 0px #00b4fc,-13px -13px 0px #012677;
+}
+
+.services__container p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.services__container__name_price {
+    text-align: center;
+}
+
+.services__container__name_price span {
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(16, 138, 16);
+}
+
+.services__container__service__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(188, 188, 188);
+    border-radius: 30px;
+    width: 300px;
+    padding: 25px 20px;
+}
+
+.services__container__service__list div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.services__container__service__list div li {
+    color: black;
+}
+
