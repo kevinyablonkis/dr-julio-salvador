@@ -59,3 +59,11 @@
 .login__option_register .to_register:hover {
     border-bottom: 1px solid white;
 }
+
+.error_form_login, .error_form_login_used {
+    padding: 5px 10px;
+    text-align: center;
+    background-color: #c72121;
+    border-radius: 10px;
+    color: white;
+}

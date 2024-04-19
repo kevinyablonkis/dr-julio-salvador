@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import Button from "./Button";
 
 // ICONS
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -6,7 +6,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
 
-import "../css/Blog.css";
+import "../css/PageBlog.css";
 
 function Blog() {
   return (

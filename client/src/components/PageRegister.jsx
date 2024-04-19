@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import { NavLink } from "../components/NavLink";
+import { NavLink } from "./NavLink";
 import { useAuth } from "../context/AuthContext";
-import "../css/Register.css";
+import "../css/PageRegister.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -35,12 +35,12 @@ function Register() {
           <label>Usuario</label>
           <input type="text" {...register("username", { required: true })} />
           {errors.username && (
-            <p className="error_form_register">Usuario es requerido</p>
+            <p className="error_form_register">Usuario requerido</p>
           )}
           <label>Correo Eléctronico</label>
           <input type="email" {...register("email", { required: true })} />
           {errors.email && (
-            <p className="error_form_register">Correo es requerido</p>
+            <p className="error_form_register">Correo requerido</p>
           )}
           <label>Contraseña</label>
           <input
@@ -48,7 +48,7 @@ function Register() {
             {...register("password", { required: true })}
           />
           {errors.password && (
-            <p className="error_form_register">Contraseña es requerida</p>
+            <p className="error_form_register">Contraseña requerida</p>
           )}
           <button className="button_primary" type="submit">
             Registrar

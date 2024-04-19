@@ -7,6 +7,7 @@ import {
   login,
   logout,
   profile,
+  verifyToken,
 } from "../controllers/auth.controller.js";
 
 const router = Router();
@@ -18,5 +19,7 @@ router.post("/iniciar-sesion", validateSchema(loginSchema), login);
 router.post("/cerrar-sesion", logout);
 
 router.get("/perfil", authRequired, profile);
+
+router.get("/verify", verifyToken, profile);
 
 export default router;

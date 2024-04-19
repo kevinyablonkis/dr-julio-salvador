@@ -1,17 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 
 import Menu from "./components/Menu";
+import NavegationInPage from "./components/NavegationInPage";
 import Footer from "./components/Footer";
+
 import Port from "./components/Port";
 import DateDoctor from "./components/DateDoctor";
-import InfoServices from "./components/InfoServices";
-import Services from "./components/Services";
-import Login from "./components/Login";
-import Register from "./components/Register";
 import Patients from "./components/Patients";
-import NavegationInPage from "./components/NavegationInPage";
-import Blog from "./components/Blog";
-import Article from "./components/Article";
+import InfoServices from "./components/InfoServices";
+
+import PageServices from "./components/PageServices";
+import PageRegister from "./components/PageRegister";
+import PageLogin from "./components/PageLogin";
+import PageBlog from "./components/PageBlog";
+import PageArticle from "./components/PageArticle";
+import PageAdmin from "./components/PageAdmin";
+
+import ProtectedRoute from "./ProtectedRoute";
 
 import { AuthProvider } from "./context/AuthContext";
 
@@ -29,26 +34,6 @@ const Home = () => {
   );
 };
 
-const PageBlog = () => {
-  return <Blog />;
-};
-
-const PageArticle = () => {
-  return <Article />;
-};
-
-const PageServices = () => {
-  return <Services />;
-};
-
-const PageRegister = () => {
-  return <Register />;
-};
-
-const PageLogin = () => {
-  return <Login />;
-};
-
 function App() {
   return (
     <AuthProvider>
@@ -64,6 +49,10 @@ function App() {
                 <Route path="servicios" element={<PageServices />} />
                 <Route path="registrarse" element={<PageRegister />} />
                 <Route path="iniciar-sesion" element={<PageLogin />} />
+
+                <Route element={<ProtectedRoute />}>
+                  <Route path="admin" element={<PageAdmin />} />
+                </Route>
               </Routes>
             </main>
           </div>

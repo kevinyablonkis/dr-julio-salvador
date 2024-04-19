@@ -62,6 +62,7 @@
 
 .error_form_register, .error_form_register_used {
     padding: 5px 10px;
+    text-align: center;
     background-color: #c72121;
     border-radius: 10px;
     color: white;

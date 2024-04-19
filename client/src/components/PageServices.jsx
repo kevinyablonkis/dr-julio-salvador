@@ -1,7 +1,7 @@
-import ListGreen from "../components/ListGreen";
-import ListRed from "../components/ListRed";
-import Button from "../components/Button";
-import "../css/Services.css";
+import ListGreen from "./ListGreen";
+import ListRed from "./ListRed";
+import Button from "./Button";
+import "../css/PageServices.css";
 
 function Services() {
   return (

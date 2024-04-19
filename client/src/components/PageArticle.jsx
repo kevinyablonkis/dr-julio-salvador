@@ -1,12 +1,12 @@
-import Button from "../components/Button";
-import ButtonDownload from "../components/ButtonDownload";
+import Button from "./Button";
+import ButtonDownload from "./ButtonDownload";
 
 // ICONS
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-import "../css/Article.css";
+import "../css/PageArticle.css";
 
 function Article() {
   return (
