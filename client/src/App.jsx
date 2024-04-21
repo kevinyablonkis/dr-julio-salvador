@@ -52,7 +52,6 @@ function App() {
 
                 <Route element={<ProtectedRoute />}>
                   <Route path="admin" element={<PageAdmin />} />
-                  <Route path="perfil" element={<PageAdmin />} />
                 </Route>
               </Routes>
             </main>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
-import { NavLink } from "../components/NavLink";
 import { FaUser } from "react-icons/fa";
 
 import "../css/ButtonUser.css";
@@ -24,20 +23,24 @@ function ButtonUser() {
   });
 
   return (
-    <div className={isActive ? " is-active" : "create_login"}>
-      <span className="create_login__icon" onClick={toggleStyle}>
+    <div className={isActive ? " is-active" : "button_user"}>
+      <span className="button_user__icon" onClick={toggleStyle}>
         <FaUser />
       </span>
       <div
-        className="create_login__option"
+        className="button_user__option"
         style={{ display: isFlex ? "flex" : "none" }}
       >
-        <NavLink to={"/perfil"} onClick={toggleStyle}>
-          {" "}
-          Perfil
-        </NavLink>
+        <div className="button_user__option__date">
+          <p className="button_user__option__username">{user.username}</p>
+          <p className="button_user__option__email">{user.email}</p>
+        </div>
         <form onSubmit={onSubmit}>
-          <button className="" type="submit" onClick={toggleStyle}>
+          <button
+            className="button_user__option__btn"
+            type="submit"
+            onClick={toggleStyle}
+          >
             Cerrar sesión
           </button>
         </form>
