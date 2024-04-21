@@ -15,7 +15,7 @@ function ButtonOptionUser() {
   };
 
   return (
-    <div className={isActive ? " is-active" : "create_login"}>
+    <div className={isActive ? "is-active" : "create_login"}>
       <span className="create_login__icon" onClick={toggleStyle}>
         <FaUserCircle />
       </span>
