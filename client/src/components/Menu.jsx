@@ -4,12 +4,16 @@ import { AiFillHome } from "react-icons/ai";
 
 import { IconContext } from "react-icons";
 import ButtonOptionUser from "../components/ButtonOptionUser";
+import ButtonUser from "../components/ButtonUser";
 
 import { NavLink } from "../components/NavLink";
+import { useAuth } from "../context/AuthContext";
 
 import "../css/Menu.css";
 
 function Menu() {
+  const { isAuthenticated } = useAuth();
+
   return (
     <header className="header">
       <IconContext.Provider value={{ size: "28px" }}>
@@ -38,7 +42,7 @@ function Menu() {
             </li>
           </ul>
         </nav>
-        <ButtonOptionUser />
+        {isAuthenticated ? <ButtonUser /> : <ButtonOptionUser />}
       </IconContext.Provider>
     </header>
   );

@@ -1,5 +1,10 @@
 import { useState, createContext, useContext, useEffect } from "react";
-import { registerRequest, loginRequest, verifyTokenRequest } from "../api/auth";
+import {
+  registerRequest,
+  loginRequest,
+  logoutRequest,
+  verifyTokenRequest,
+} from "../api/auth";
 import Cookies from "js-cookie";
 
 export const AuthContext = createContext();
@@ -40,6 +45,17 @@ export const AuthProvider = ({ children }) => {
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);
       }
+      return setErrors([error.response.data.message]);
+    }
+  };
+
+  const logout = async () => {
+    try {
+      const res = await logoutRequest();
+      console.log(res);
+      setUser(null);
+      setIsAuthenticated(false);
+    } catch (error) {
       return setErrors([error.response.data.message]);
     }
   };
@@ -89,7 +105,15 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ signup, signin, user, isAuthenticated, isLoading, errors }}
+      value={{
+        signup,
+        signin,
+        logout,
+        user,
+        isAuthenticated,
+        isLoading,
+        errors,
+      }}
     >
       {children}
     </AuthContext.Provider>

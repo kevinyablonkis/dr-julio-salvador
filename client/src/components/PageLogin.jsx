@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { NavLink } from "./NavLink";
 import { useForm } from "react-hook-form";
 import "../css/PageLogin.css";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 function Login() {
@@ -9,11 +11,17 @@ function Login() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { signin, errors: signinErrors } = useAuth();
+  const { signin, errors: signinErrors, isAuthenticated } = useAuth();
 
   const onSubmit = handleSubmit((data) => {
     signin(data);
   });
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) navigate("/");
+  }, [isAuthenticated]);
 
   return (
     <div className="login">

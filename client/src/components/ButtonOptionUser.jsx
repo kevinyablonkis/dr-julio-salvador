@@ -15,7 +15,7 @@ function ButtonOptionUser() {
   };
 
   return (
-    <div className={isActive ? "is-active" : "create_login"}>
+    <div className={isActive ? " is-active" : "create_login"}>
       <span className="create_login__icon" onClick={toggleStyle}>
         <FaUserCircle />
       </span>
@@ -23,8 +23,8 @@ function ButtonOptionUser() {
         className="create_login__option"
         style={{ display: isFlex ? "flex" : "none" }}
       >
-        <NavLink to={"/iniciar-sesion"}> Iniciar Sessión</NavLink>
-        <NavLink to={"/registrarse"}> Crear Cuenta</NavLink>
+        <NavLink to={"/iniciar-sesion"} onClick={toggleStyle} > Iniciar Sessión</NavLink>
+        <NavLink to={"/registrarse"} onClick={toggleStyle} > Crear Cuenta</NavLink>
       </div>
     </div>
   );
