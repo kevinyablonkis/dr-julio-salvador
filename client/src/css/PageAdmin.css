@@ -69,8 +69,16 @@
 .admin__content__dashboard__option {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 20px;
     font-size: 18px;
+}
+
+.admin__content__dashboard__option button {
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 .admin__content__blogs_and_articles {

@@ -23,19 +23,34 @@ function Menu() {
           </span>
           <ul className="header_nav_list">
             <li>
-              <NavLink to="/">
+              <NavLink
+                to="/"
+                className={({ isActive }) => {
+                  return isActive ? "is-active" : undefined;
+                }}
+              >
                 <AiFillHome />
                 Inicio
               </NavLink>
             </li>
             <li>
-              <NavLink to="/blog">
+              <NavLink
+                to="/blog"
+                className={({ isActive }) => {
+                  return isActive ? "is-active" : undefined;
+                }}
+              >
                 <LuPencilLine />
                 Blog
               </NavLink>
             </li>
             <li>
-              <NavLink to="/articulos">
+              <NavLink
+                to="/articulos"
+                className={({ isActive }) => {
+                  return isActive ? "is-active" : undefined;
+                }}
+              >
                 <RiArticleFill />
                 Artículos
               </NavLink>

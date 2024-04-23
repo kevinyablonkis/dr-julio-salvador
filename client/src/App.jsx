@@ -50,9 +50,9 @@ function App() {
                 <Route path="registrarse" element={<PageRegister />} />
                 <Route path="iniciar-sesion" element={<PageLogin />} />
 
-                {/* <Route element={<ProtectedRoute />}> */}
+                <Route element={<ProtectedRoute />}>
                   <Route path="admin" element={<PageAdmin />} />
-                {/* </Route> */}
+                </Route>
               </Routes>
             </main>
           </div>

@@ -7,15 +7,15 @@ import "../css/ButtonOptionUser.css";
 
 function ButtonOptionUser() {
   const [isFlex, setIsFlex] = useState(false);
-  const [isActive, setIsActive] = useState(false);
+  const [isActiveOption, setIsActiveOption] = useState(false);
 
   const toggleStyle = () => {
     setIsFlex((prevState) => !prevState);
-    setIsActive((prevState) => !prevState);
+    setIsActiveOption((prevState) => !prevState);
   };
 
   return (
-    <div className={isActive ? "is-active" : "create_login"}>
+    <div className={isActiveOption ? "is-active" : "create_login"}>
       <span className="create_login__icon" onClick={toggleStyle}>
         <FaUserCircle />
       </span>

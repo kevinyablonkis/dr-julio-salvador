@@ -23,7 +23,7 @@ function ButtonUser() {
   });
 
   return (
-    <div className={isActive ? " is-active" : "button_user"}>
+    <div className={isActive ? " is-active-user" : "button_user"}>
       <span className="button_user__icon" onClick={toggleStyle}>
         <FaUser />
       </span>

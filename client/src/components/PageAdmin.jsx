@@ -26,9 +26,9 @@ function PageAdmin() {
         <div className="admin__content__dashboard">
           <h2>Titulo</h2>
           <div className="admin__content__dashboard__option">
-            <span>Conjunto de valores</span>
-            <span>Relaciones especificas</span>
-            <span>Medicamentos perfectos</span>
+            <button>Conjunto de valores</button>
+            <button>Relaciones especificas</button>
+            <button>Medicamentos perfectos</button>
           </div>
         </div>
         <div className="admin__content__blogs_and_articles">
