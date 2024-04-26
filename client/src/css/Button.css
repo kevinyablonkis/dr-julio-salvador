@@ -10,6 +10,7 @@
     border: none;
     border-radius: 30px;
     transition: ease .3s;
+    cursor: pointer;
 }
 
 .button_primary:hover {

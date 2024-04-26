@@ -41,7 +41,7 @@
 }
 
 .admin__header__new__blog:hover, .admin__header__new__article:hover {
-    transform: scale(108%);
+    background-color: #163983;
 }
 
 .admin__content {
@@ -163,4 +163,209 @@
     padding: 15px;
     height: 100%;
     overflow: auto;
+}
+
+/* SECTION CREATE BLOG */
+
+.create_blog__container {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.612);
+    animation: aparecer .2s ease-in-out;
+}
+
+.create_blog {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 900px;
+    height: 550px;
+    padding: 20px 50px;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 30px;
+}
+
+.create_blog__pdf {
+    width: 350px;
+    height: 450px;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.create_blog__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+}
+
+.create_blog__info h3 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.create_blog__info__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.create_blog__info__container label {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.create_blog__info__container input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+.create_blog__info__container textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+    resize: none;
+}
+
+.blog__description__ip {
+    height: 150px;
+}
+
+.create_blog__btn_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    padding: 8px;
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+.create_blog__btn_close:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+/* SECTION CREATE ARTICLE */
+
+.create_article__container {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.612);
+    animation: aparecer .2s ease-in-out;
+}
+
+.create_article {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 900px;
+    height: 550px;
+    padding: 20px 50px;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 30px;
+}
+
+.create_article__pdf {
+    width: 350px;
+    height: 450px;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.create_article__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+}
+
+.create_article__info h3 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.create_article__info__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.create_article__info__container label {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.create_article__info__container input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+.create_article__info__container textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+    resize: none;
+}
+
+.article__description__ip {
+    height: 150px;
+}
+
+.create_article__btn_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    padding: 8px;
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+.create_article__btn_close:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
