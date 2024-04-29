@@ -3,6 +3,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { connectDB } from "./db.js";
 import authRoutes from "./src/routes/auth.routes.js";
+import crudRoutes from "./src/routes/crud.routes.js";
+import getPublicationRoutes from "./src/routes/getPublication.routes.js";
 
 const app = express();
 
@@ -11,6 +13,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api", authRoutes);
+app.use("/api", crudRoutes);
+app.use("/api", getPublicationRoutes);
 
 connectDB();
 
