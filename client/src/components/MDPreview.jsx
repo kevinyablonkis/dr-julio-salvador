@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
-import "../css/PDFPreview.css";
+import "../css/MDPreview.css";
 
-const PdfPreview = () => {
-  const [pdfFile, setPdfFile] = useState(null);
+const MDPreview = () => {
+  const [mdFile, setMdFile] = useState(null);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file && file.type === "application/pdf") {
+    if (file && file.type === "application/md") {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setPdfFile(reader.result);
+        setMdFile(reader.result);
       };
       reader.readAsDataURL(file);
     } else {
-      setPdfFile(null);
+      setMdFile(null);
     }
   };
 
@@ -23,43 +23,43 @@ const PdfPreview = () => {
   };
 
   const toggleContentInputFile = () => {
-    setPdfFile(null);
+    setMdFile(null);
   };
 
   return (
     <div
-      className={pdfFile ? "create_article__pdf" : "create_article__pdf_empyt"}
+      className={mdFile ? "create_article__md" : "create_article__md_empyt"}
     >
       <input
         type="file"
         id="fileInput"
-        accept=".pdf"
+        accept=".md"
         onChange={handleFileChange}
         style={{ display: "none" }}
       />
-      {pdfFile && (
+      {mdFile && (
         <embed
-          src={pdfFile}
-          type="application/pdf"
+          src={mdFile}
+          type="application/md"
           width="100%"
           height="600px"
         />
       )}
-      {pdfFile && (
+      {mdFile && (
         <button
-          className="btn_archive_pdf_close"
+          className="btn_archive_md_close"
           onClick={toggleContentInputFile}
         >
           <IoCloseOutline size={"20px"} />
         </button>
       )}
-      {!pdfFile && (
-        <button className="btn_archive_pdf" onClick={handleClick}>
-          Selecciona un archivo .PDF
+      {!mdFile && (
+        <button className="btn_archive_md" onClick={handleClick}>
+          Selecciona un archivo .MD
         </button>
       )}
     </div>
   );
 };
 
-export default PdfPreview;
+export default MDPreview;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PDFPreview from "./PDFPreview";
+import MDPreview from "./MDPreview";
 import { IoCloseOutline } from "react-icons/io5";
 import { CiFilter } from "react-icons/ci";
 import { IoSearch } from "react-icons/io5";
@@ -37,7 +38,7 @@ function PageAdmin() {
           >
             <IoCloseOutline fontSize={"20px"} />
           </button>
-          <div className="create_blog__pdf"></div>
+          <MDPreview />
           <form className="create_blog__info">
             <h3>Datos del Blog</h3>
             <div className="create_blog__info__container">
