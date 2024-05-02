@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PDFPreview from "./PDFPreview";
 import { IoCloseOutline } from "react-icons/io5";
 import { CiFilter } from "react-icons/ci";
 import { IoSearch } from "react-icons/io5";
@@ -61,7 +62,7 @@ function PageAdmin() {
           >
             <IoCloseOutline fontSize={"20px"} />
           </button>
-          <div className="create_article__pdf"></div>
+          <PDFPreview />
           <form className="create_article__info">
             <h3>Datos del Árticulo</h3>
             <div className="create_article__info__container">
@@ -104,7 +105,7 @@ function PageAdmin() {
         <div className="admin__content__blogs_and_articles">
           <div className="admin__content__blogs_and_articles__search">
             <div className="blogs_and_articles__search__container">
-              <p>Buscar</p>
+              <input type="text" placeholder="Buscar" />
               <span className="search__container__icon">
                 <IoSearch size="20px" />
               </span>
