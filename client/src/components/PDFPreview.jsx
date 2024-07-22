@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
+import { FaCheckCircle } from "react-icons/fa";
+
 import "../css/PDFPreview.css";
 
 const PdfPreview = () => {
   const [pdfFile, setPdfFile] = useState(null);
 
-  const handleFileChange = (e) => {
+  const handleFileChangePDF = (e) => {
     const file = e.target.files[0];
-    if (file && file.type === "application/pdf") {
+    if (file && file.type === "aplication/pdf") {
       const reader = new FileReader();
       reader.onloadend = () => {
         setPdfFile(reader.result);
@@ -18,11 +20,11 @@ const PdfPreview = () => {
     }
   };
 
-  const handleClick = () => {
+  const handleClickPDF = () => {
     document.getElementById("fileInput").click();
   };
 
-  const toggleContentInputFile = () => {
+  const toggleContentInputFilePDF = () => {
     setPdfFile(null);
   };
 
@@ -34,27 +36,25 @@ const PdfPreview = () => {
         type="file"
         id="fileInput"
         accept=".pdf"
-        onChange={handleFileChange}
+        onChange={handleFileChangePDF}
         style={{ display: "none" }}
       />
       {pdfFile && (
-        <embed
-          src={pdfFile}
-          type="application/pdf"
-          width="100%"
-          height="600px"
-        />
+        <div className="create_article_div_successFile">
+          <FaCheckCircle color="rgb(18, 107, 18)" size={"90px"} />
+          <span>¡Archivo cargado!</span>
+        </div>
       )}
       {pdfFile && (
         <button
           className="btn_archive_pdf_close"
-          onClick={toggleContentInputFile}
+          onClick={toggleContentInputFilePDF}
         >
           <IoCloseOutline size={"20px"} />
         </button>
       )}
       {!pdfFile && (
-        <button className="btn_archive_pdf" onClick={handleClick}>
+        <button className="btn_archive_pdf" onClick={handleClickPDF}>
           Selecciona un archivo .PDF
         </button>
       )}

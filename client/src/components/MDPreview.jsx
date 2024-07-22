@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
+import { FaCheckCircle } from "react-icons/fa";
+
 import "../css/MDPreview.css";
 
 const MDPreview = () => {
   const [mdFile, setMdFile] = useState(null);
 
-  const handleFileChange = (e) => {
+  const handleFileChangeMD = (e) => {
     const file = e.target.files[0];
-    if (file && file.type === "application/md") {
+    if (file && file.type === "text/markdown") {
       const reader = new FileReader();
       reader.onloadend = () => {
         setMdFile(reader.result);
@@ -18,43 +20,39 @@ const MDPreview = () => {
     }
   };
 
-  const handleClick = () => {
+  const handleClickMD = () => {
     document.getElementById("fileInput").click();
   };
 
-  const toggleContentInputFile = () => {
+  const toggleContentInputFileMD = () => {
     setMdFile(null);
   };
 
   return (
-    <div
-      className={mdFile ? "create_article__md" : "create_article__md_empyt"}
-    >
+    <div className={mdFile ? "create_blog__md" : "create_blog__md_empyt"}>
       <input
         type="file"
         id="fileInput"
         accept=".md"
-        onChange={handleFileChange}
+        onChange={handleFileChangeMD}
         style={{ display: "none" }}
       />
       {mdFile && (
-        <embed
-          src={mdFile}
-          type="application/md"
-          width="100%"
-          height="600px"
-        />
+        <div className="create_blog_div_successFile">
+          <FaCheckCircle color="rgb(18, 107, 18)" size={"90px"} />
+          <span>¡Archivo cargado!</span>
+        </div>
       )}
       {mdFile && (
         <button
           className="btn_archive_md_close"
-          onClick={toggleContentInputFile}
+          onClick={toggleContentInputFileMD}
         >
           <IoCloseOutline size={"20px"} />
         </button>
       )}
       {!mdFile && (
-        <button className="btn_archive_md" onClick={handleClick}>
+        <button className="btn_archive_md" onClick={handleClickMD}>
           Selecciona un archivo .MD
         </button>
       )}

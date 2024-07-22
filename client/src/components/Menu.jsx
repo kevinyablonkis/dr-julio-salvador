@@ -1,6 +1,7 @@
 import { RiArticleFill } from "react-icons/ri";
 import { LuPencilLine } from "react-icons/lu";
 import { AiFillHome } from "react-icons/ai";
+import { LuLayoutDashboard } from "react-icons/lu";
 
 import { IconContext } from "react-icons";
 import ButtonOptionUser from "../components/ButtonOptionUser";
@@ -23,6 +24,19 @@ function Menu() {
           </span>
           <ul className="header_nav_list">
             <li>
+              {isAuthenticated && (
+                <li>
+                  <NavLink
+                    to="/admin"
+                    className={({ isActive }) => {
+                      return isActive ? "is-active" : undefined;
+                    }}
+                  >
+                    <LuLayoutDashboard />
+                    Admin
+                  </NavLink>
+                </li>
+              )}
               <NavLink
                 to="/"
                 className={({ isActive }) => {
