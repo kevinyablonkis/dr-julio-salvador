@@ -7,10 +7,11 @@ import "../css/MDPreview.css";
 const MDPreview = () => {
   const [mdFile, setMdFile] = useState(null);
 
-  const handleFileChangeMD = (e) => {
+  const handleFileChangeMD = async (e) => {
     const file = e.target.files[0];
+    console.log(file);
     if (file && file.type === "text/markdown") {
-      const reader = new FileReader();
+      const reader = await new FileReader();
       reader.onloadend = () => {
         setMdFile(reader.result);
       };
@@ -21,7 +22,7 @@ const MDPreview = () => {
   };
 
   const handleClickMD = () => {
-    document.getElementById("fileInput").click();
+    document.getElementById("fileInputMD").click();
   };
 
   const toggleContentInputFileMD = () => {
@@ -32,7 +33,7 @@ const MDPreview = () => {
     <div className={mdFile ? "create_blog__md" : "create_blog__md_empyt"}>
       <input
         type="file"
-        id="fileInput"
+        id="fileInputMD"
         accept=".md"
         onChange={handleFileChangeMD}
         style={{ display: "none" }}

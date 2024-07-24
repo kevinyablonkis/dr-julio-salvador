@@ -7,10 +7,10 @@ import "../css/PDFPreview.css";
 const PdfPreview = () => {
   const [pdfFile, setPdfFile] = useState(null);
 
-  const handleFileChangePDF = (e) => {
+  const handleFileChangePDF = async (e) => {
     const file = e.target.files[0];
-    if (file && file.type === "aplication/pdf") {
-      const reader = new FileReader();
+    if (file && file.type === "application/pdf") {
+      const reader = await new FileReader();
       reader.onloadend = () => {
         setPdfFile(reader.result);
       };
@@ -21,7 +21,7 @@ const PdfPreview = () => {
   };
 
   const handleClickPDF = () => {
-    document.getElementById("fileInput").click();
+    document.getElementById("fileInputPDF").click();
   };
 
   const toggleContentInputFilePDF = () => {
@@ -34,7 +34,7 @@ const PdfPreview = () => {
     >
       <input
         type="file"
-        id="fileInput"
+        id="fileInputPDF"
         accept=".pdf"
         onChange={handleFileChangePDF}
         style={{ display: "none" }}
