@@ -5,11 +5,14 @@ import { createBlogSchema } from "../schemas/crud.schema.js";
 import {
   createBlog,
   deleteBlog,
+  getBlog,
   updateBlog,
 } from "../controllers/crudBlog.controller.js";
 import { verifyToken } from "../controllers/auth.controller.js";
 
 const router = Router();
+
+router.get("/", authRequired, getBlog);
 
 router.post("/", authRequired, validateSchema(createBlogSchema), createBlog);
 

@@ -1,5 +1,10 @@
 import Article from "../models/article.model.js";
 
+export const getArticle = async (req, res) => {
+  const getArticle = await Article.find();
+  res.json(getArticle);
+};
+
 export const createArticle = async (req, res) => {
   const { title, description, name_archive } = req.body;
 

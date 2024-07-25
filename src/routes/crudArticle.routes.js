@@ -5,11 +5,14 @@ import { createArticleSchema } from "../schemas/crud.schema.js";
 import {
   createArticle,
   deleteArticle,
+  getArticle,
   updateArticle,
 } from "../controllers/crudArticle.controller.js";
 import { verifyToken } from "../controllers/auth.controller.js";
 
 const router = Router();
+
+router.get("/", authRequired, getArticle);
 
 router.post(
   "/",

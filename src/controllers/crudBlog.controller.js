@@ -1,5 +1,10 @@
 import Blog from "../models/blog.model.js";
 
+export const getBlog = async (req, res) => {
+  const getBlog = await Blog.find();
+  res.json(getBlog);
+};
+
 export const createBlog = async (req, res) => {
   const { title, description, name_archive } = req.body;
 
