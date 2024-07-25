@@ -7,7 +7,6 @@ import { connectDB } from "./db.js";
 import authRoutes from "./src/routes/auth.routes.js";
 import crudArticleRoutes from "./src/routes/crudArticle.routes.js";
 import crudBlogRoutes from "./src/routes/crudBlog.routes.js";
-import getPublicationRoutes from "./src/routes/getPublication.routes.js";
 
 const app = express();
 
@@ -18,7 +17,6 @@ app.use(cookieParser());
 app.use("/api", authRoutes);
 app.use("/api/blog", crudBlogRoutes);
 app.use("/api/article", crudArticleRoutes);
-app.use("/api", getPublicationRoutes);
 
 connectDB();
 
