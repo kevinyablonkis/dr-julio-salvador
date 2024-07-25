@@ -1,21 +1,14 @@
 import { useState } from "react";
+import { IoCloseOutline } from "react-icons/io5";
 import PDFPreview from "./PDFPreview";
 import MDPreview from "./MDPreview";
-import { IoCloseOutline } from "react-icons/io5";
-import { CiFilter } from "react-icons/ci";
-import { IoSearch } from "react-icons/io5";
+import AdminContent from "../components/AdminContent";
 import Button from "../components/Button";
-import CardInfoOfAdmin from "../components/CardInfoOfAdmin";
 import "../css/PageAdmin.css";
 
 function PageAdmin() {
-  const [isFlex, setIsFlex] = useState(false);
   const [isActiveBlog, setIsActiveBlog] = useState(false);
   const [isActiveArticle, setIsActiveArticle] = useState(false);
-
-  const toggleStyle = () => {
-    setIsFlex((prevState) => !prevState);
-  };
 
   const toggleStyleBlog = () => {
     setIsActiveBlog((prevState) => !prevState);
@@ -31,52 +24,70 @@ function PageAdmin() {
         className="create_blog__container"
         style={{ display: isActiveBlog ? "flex" : "none" }}
       >
-        <article className="create_blog">
-          <button
+        <form className="create_blog">
+          <span
             className="create_blog__btn_close"
             onClick={() => toggleStyleBlog()}
           >
             <IoCloseOutline fontSize={"20px"} />
-          </button>
+          </span>
           <MDPreview />
-          <form className="create_blog__info">
+          <div className="create_blog__info">
             <h3>Datos del Blog</h3>
             <div className="create_blog__info__container">
-              <label htmlFor="">Titulo del Blog</label>
-              <input className="blog__title__ip" type="text" />
-              <label htmlFor="">Descripción:</label>
-              <textarea className="blog__description__ip" type="text" />
+              <label htmlFor="title_blog">Titulo del Blog</label>
+              <input
+                className="blog__title__ip"
+                id="title_blog"
+                name="title"
+                type="text"
+              />
+              <label htmlFor="description_blog">Descripción:</label>
+              <textarea
+                className="blog__description__ip"
+                id="description_blog"
+                name="description"
+                type="text"
+              />
             </div>
-            <Button valor="Publicar" ancho="250px" />
-          </form>
-        </article>
+            <Button valor="Publicar" ancho="250px" type="submit" />
+          </div>
+        </form>
       </div>
-
       <div
         className="create_article__container"
         style={{ display: isActiveArticle ? "flex" : "none" }}
       >
-        <article className="create_article">
-          <button
+        <form className="create_article">
+          <span
             className="create_article__btn_close"
             onClick={() => toggleStyleArticle()}
           >
             <IoCloseOutline fontSize={"20px"} />
-          </button>
+          </span>
           <PDFPreview />
-          <form className="create_article__info">
+          <div className="create_article__info">
             <h3>Datos del Árticulo</h3>
             <div className="create_article__info__container">
-              <label htmlFor="">Titulo del Árticulo</label>
-              <input className="article__title__ip" type="text" />
-              <label htmlFor="">Descripción:</label>
-              <textarea className="article__description__ip" type="text" />
+              <label htmlFor="title_article">Titulo del Árticulo</label>
+              <input
+                className="article__title__ip"
+                id="title_article"
+                name="title"
+                type="text"
+              />
+              <label htmlFor="description_article">Descripción:</label>
+              <textarea
+                className="article__description__ip"
+                id="description_article"
+                name="description"
+                type="text"
+              />
             </div>
-            <Button valor="Publicar" ancho="250px" />
-          </form>
-        </article>
+            <Button valor="Publicar" ancho="250px" type="submit" />
+          </div>
+        </form>
       </div>
-
       <div className="admin__header">
         <h1>Admin</h1>
         <div className="admin__header__new">
@@ -94,44 +105,7 @@ function PageAdmin() {
           </button>
         </div>
       </div>
-      <div className="admin__content">
-        <div className="admin__content__dashboard">
-          <h2>Titulo</h2>
-          <div className="admin__content__dashboard__option">
-            <button>Conjunto de valores</button>
-            <button>Relaciones especificas</button>
-            <button>Medicamentos perfectos</button>
-          </div>
-        </div>
-        <div className="admin__content__blogs_and_articles">
-          <div className="admin__content__blogs_and_articles__search">
-            <div className="blogs_and_articles__search__container">
-              <input type="text" placeholder="Buscar" />
-              <span className="search__container__icon">
-                <IoSearch size="20px" />
-              </span>
-            </div>
-            <button onClick={toggleStyle}>
-              <CiFilter size="25px" />
-              Filtros
-            </button>
-            <div
-              className="admin__content__blogs_and_articles__container_filter"
-              style={{ display: isFlex ? "flex" : "none" }}
-            >
-              <span>Vistos</span>
-              <span>Amados</span>
-              <span>Compartidos</span>
-              <span>Comentados</span>
-            </div>
-          </div>
-          <div className="admin__content__blogs_and_articles__container">
-            <CardInfoOfAdmin />
-            <CardInfoOfAdmin />
-            <CardInfoOfAdmin />
-          </div>
-        </div>
-      </div>
+      <AdminContent />
     </section>
   );
 }

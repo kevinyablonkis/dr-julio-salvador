@@ -46,17 +46,17 @@ const MDPreview = () => {
         </div>
       )}
       {mdFile && (
-        <button
+        <span
           className="btn_archive_md_close"
           onClick={toggleContentInputFileMD}
         >
           <IoCloseOutline size={"20px"} />
-        </button>
+        </span>
       )}
       {!mdFile && (
-        <button className="btn_archive_md" onClick={handleClickMD}>
+        <span className="btn_archive_md" onClick={handleClickMD}>
           Selecciona un archivo .MD
-        </button>
+        </span>
       )}
     </div>
   );

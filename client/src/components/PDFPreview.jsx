@@ -47,17 +47,17 @@ const PdfPreview = () => {
         </div>
       )}
       {pdfFile && (
-        <button
+        <span
           className="btn_archive_pdf_close"
           onClick={toggleContentInputFilePDF}
         >
           <IoCloseOutline size={"20px"} />
-        </button>
+        </span>
       )}
       {!pdfFile && (
-        <button className="btn_archive_pdf" onClick={handleClickPDF}>
+        <span className="btn_archive_pdf" onClick={handleClickPDF}>
           Selecciona un archivo .PDF
-        </button>
+        </span>
       )}
     </div>
   );
