@@ -26,6 +26,7 @@ const PdfPreview = () => {
 
   const toggleContentInputFilePDF = () => {
     setPdfFile(null);
+    document.getElementById("fileInputPDF").value = "";
   };
 
   return (

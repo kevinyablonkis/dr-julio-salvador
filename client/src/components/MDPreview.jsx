@@ -27,6 +27,7 @@ const MDPreview = () => {
 
   const toggleContentInputFileMD = () => {
     setMdFile(null);
+    document.getElementById("fileInputMD").value = "";
   };
 
   return (
