@@ -7,8 +7,6 @@ function Button({ valor, ancho, type }) {
 
   const tipoBoton = type ? "submit" : "none";
 
-  console.log(tipoBoton);
-
   return (
     <button className="button_primary" style={estiloBoton} type={tipoBoton}>
       {valor}

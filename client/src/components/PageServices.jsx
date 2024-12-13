@@ -15,28 +15,28 @@ function Services() {
           </div>
           <ul className="services__container__service__list">
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Asesoría inicial" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Evaluación de necesidades" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Plan de acción" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Seguimiento regular" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Planificación detallada" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Soluciones a medida" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Atención personalizada" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Recursos premium" />
             </div>
           </ul>
           <Button valor="Contratar" ancho={"200px"} />
@@ -48,28 +48,28 @@ function Services() {
           </div>
           <ul className="services__container__service__list">
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Asesoría inicial" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Evaluación de necesidades" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Plan de acción" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Seguimiento regular" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Planificación detallada" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Soluciones a medida" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Atención personalizada" />
             </div>
             <div>
-              <ListRed content="Servicio Tal" />
+              <ListRed content="Recursos premium" />
             </div>
           </ul>
           <Button valor="Contratar" ancho={"200px"} />
@@ -81,28 +81,28 @@ function Services() {
           </div>
           <ul className="services__container__service__list">
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Asesoría inicial" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Evaluación de necesidades" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Plan de acción" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Seguimiento regular" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Planificación detallada" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Soluciones a medida" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Atención personalizada" />
             </div>
             <div>
-              <ListGreen content="Servicio Tal" />
+              <ListGreen content="Recursos premium" />
             </div>
           </ul>
           <Button valor="Contratar" ancho={"200px"} />

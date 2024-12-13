@@ -25,17 +25,15 @@ function Menu() {
           <ul className="header_nav_list">
             <li>
               {isAuthenticated && (
-                <li>
-                  <NavLink
-                    to="/admin"
-                    className={({ isActive }) => {
-                      return isActive ? "is-active" : undefined;
-                    }}
-                  >
-                    <LuLayoutDashboard />
-                    Admin
-                  </NavLink>
-                </li>
+                <NavLink
+                  to="/admin"
+                  className={({ isActive }) => {
+                    return isActive ? "is-active" : undefined;
+                  }}
+                >
+                  <LuLayoutDashboard />
+                  Admin
+                </NavLink>
               )}
               <NavLink
                 to="/"

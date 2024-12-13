@@ -19,6 +19,7 @@ import PageAdmin from "./components/PageAdmin";
 import ProtectedRoute from "./ProtectedRoute";
 
 import { AuthProvider } from "./context/AuthContext";
+import { PostProvider } from "./context/PostContext";
 
 import "./App.css";
 
@@ -37,7 +38,7 @@ const Home = () => {
 function App() {
   return (
     <AuthProvider>
-      <>
+      <PostProvider>
         <div className="container_menu_main">
           <Menu />
           <div className="content_of_page">
@@ -51,14 +52,14 @@ function App() {
                 <Route path="iniciar-sesion" element={<PageLogin />} />
 
                 {/* <Route element={<ProtectedRoute />}> */}
-                  <Route path="admin" element={<PageAdmin />} />
+                <Route path="admin" element={<PageAdmin />} />
                 {/* </Route> */}
               </Routes>
             </main>
           </div>
         </div>
         <Footer />
-      </>
+      </PostProvider>
     </AuthProvider>
   );
 }
